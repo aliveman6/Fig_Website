@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/GiveMessage.css" />
+    <link rel="stylesheet" href="../Css/font-awesome.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fa fa-remove" style="font-size: 30px"></i>
+          </button>
+          <button id="open">
+            <i class="fa fa-navicon" style="font-size: 30px"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>请输入下方信息以便我们以后给您答复！！</h2>
+        <form method="get" name="form" onSubmit="return beforeSubmit(this);">
+          <table border="0">
+            <tr>
+              <td>留言时间：<span id="time"></span></td>
+            </tr>
+            <tr>
+              <td>您的昵称：<input type="text" name="username" value="" /></td>
+            </tr>
+            <tr>
+              <td>您的电话号码：<input type="tel" name="tel" value="" /></td>
+            </tr>
+            <tr>
+              <td>您的QQ邮箱：<input type="email" name="email" value="" /></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="MessageContent">留言内容：</div>
+                <br />
+                <textarea
+                  cols="40"
+                  rows="8"
+                  id="text1"
+                  name="textarea"
+                  value=""
+                ></textarea
+                ><br /><br /><br />
+                剩余字符:<span id="textleft"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button value="留言" type="submit">留言</button>
+                <button type="reset" value="重置">重置</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <div class="botton">
+          <input value="留言" type="submit" id="btn" />
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <div class="NAV">
+          <li>
+            <i class="fas"><a href="../index.html">首页</a></i>
+          </li>
+          <li>
+            <i class="fas"><a href="./TabList.html">无花果</a></i>
+            <ul class="TwiceNav">
+              <li><a href="./TabList.html">无花果干</a></li>
+              <li><a href="./TabList.html">生鲜无花果</a></li>
+              <li><a href="./AboutUs.html">关于我们</a></li>
+            </ul>
+          </li>
+          <li>
+            <i class="fas"><a href="./GiveMessage.html">给我们留言</a></i>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <script>
+      // “留言”按钮点击后为禁用状态，60s倒计完成后即可重新点击
+      var wait = 60;
+      function time(o) {
+        if (wait == 0) {
+          o.removeAttribute("disabled");
+          o.value = "留言";
+          wait = 60;
+        } else {
+          o.setAttribute("disabled", true);
+          o.value = wait + "秒后可重新留言";
+          wait--;
+          setTimeout(function () {
+            time(o);
+          }, 1000);
+        }
+      }
+      document.getElementById("btn").onclick = function () {
+        time(this);
+      };
+
+      // 显示留言内容剩余多少字符
+      var otext = document.getElementById("text1");
+      var otextleft = document.getElementById("textleft");
+      var re = /[^\x00-\xff]/g;
+      var maxLength = 40;
+      window.onload = function () {
+        if (document.all) otext.onpropertychange = textleft;
+        else otext.onkeypress = textleft;
+      };
+      function textleft() {
+        var str = otext.value;
+        str = str.replace(re, "xx"); //中文字符当2个字符处理 如果不用的话主是掉本行
+        otextleft.innerHTML = maxLength - str.length;
+      }
+    </script>
+    <script src="../Js/GiveMessage.js"></script>
+  </body>
+</html>

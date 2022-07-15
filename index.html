@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/index.css" />
+    <script src="./Js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./Css/font-awesome.css" />
+    <title>MyWebSite</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fa fa-remove" style="font-size: 30px"></i>
+          </button>
+          <button id="open">
+            <i class="fa fa-navicon" style="font-size: 30px"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>无花果</h1>
+        <div class="Logo">
+          <img src="./Img/logo.png" alt="图片加载失败" />
+        </div>
+      </div>
+
+      <div id="wrapper">
+        <div id="slider-wrap">
+          <ul id="slider">
+            <li data-color="#1abc9c">
+              <div>
+                <h3>“新鲜出炉”的无花果</h3>
+                <span>这是一碗刚刚采摘完成的无花果</span>
+              </div>
+              <i class="fa"><img src="./Img/banner (1).jpg" alt="" /></i>
+            </li>
+
+            <li data-color="#3498db">
+              <div>
+                <h3>美味的无花果</h3>
+                <span>无花果具有一定的降压作用</span>
+              </div>
+              <i class="fa"><img src="./Img/banner (2).jpg" alt="" /></i>
+            </li>
+
+            <li data-color="#9b59b6">
+              <div>
+                <h3>无花果酱的制作原料</h3>
+                <span>据科学研究表明，吃一些无花果酱能预防冠心病发生</span>
+              </div>
+              <i class="fa"><img src="./Img/banner (3).jpg" alt="" /></i>
+            </li>
+
+            <li data-color="#34495e">
+              <div>
+                <h3>成熟的无花果</h3>
+                <span
+                  >无花果成熟的标志是果皮上的网纹明显易见，果孔颜色变为深红色</span
+                >
+              </div>
+              <i class="fa"><img src="./Img/banner (4).jpg" alt="" /></i>
+            </li>
+
+            <li data-color="#e74c3c">
+              <div>
+                <h3>这是两颗朴实无华的无花果</h3>
+                <span
+                  >无花果含有非常丰富的葡萄糖、果糖、蔗糖、柠檬酸以及少量植物酸</span
+                >
+              </div>
+              <i class="fa"><img src="./Img/banner (5).jpg" alt="" /></i>
+            </li>
+          </ul>
+
+          <!--轮播图左右的按钮-->
+          <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+          <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+          <div id="counter"></div>
+
+          <div id="pagination-wrap">
+            <ul></ul>
+          </div>
+          <!--轮播图左右的按钮-->
+        </div>
+      </div>
+
+      <h1 class="h1">热门文章</h1>
+      <div class="wrap">
+        <div class="tile">
+          <div class="text">
+            <a href="./Pages/PopularArticle1.html">
+              <h1>无花果的功效</h1>
+              <img src="./Img/PopularArticles (1).jpg" />
+              <h2 class="animate-text">何师傅聊装修</h2>
+              <p class="animate-text">无花果到底有什么功效呢？</p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <a href="#">
+              <h1>无花果，能让城市家庭阳台颜值暴增的神树</h1>
+              <img src="./Img/PopularArticles (2).jpg" />
+              <h2 class="animate-text">远方青木</h2>
+              <p class="animate-text">这是一棵千年神树！</p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <a href="#">
+              <h1>阿达来提·艾尼玩：种下甜蜜果 走上致富路</h1>
+              <img src="./Img/PopularArticles (3).jpg" />
+              <h2 class="animate-text">库尔勒市融媒体中心</h2>
+              <p class="animate-text">
+                6月29日，英下乡喀尔巴格村村民阿达来提·艾尼玩看着自家无花果喜获丰收，内心激动不已。
+              </p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <a href="./Pages/PopularArticle4.html">
+              <h1>无花果的营养价值</h1>
+              <img src="./Img/PopularArticles (4).jpg" />
+              <h2 class="animate-text">无花果甜不甜</h2>
+              <p class="animate-text">无花果有什么营养价值呢？</p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <a href="./Pages/PopularArticle5.html">
+              <h1>聚焦 | 一枚无花果的自述</h1>
+              <img src="./Img/PopularArticles (5).jpg" />
+              <h2 class="animate-text">掌上荣成</h2>
+              <p class="animate-text">
+                大家好，我叫无花果，籍贯是荣成市。我的来历颇深，早在《本草纲目》就有记载。
+              </p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <a href="#">
+              <h1>无花果全套栽培技术（收藏版）</h1>
+              <img src="./Img/PopularArticles (6).jpg" />
+              <h2 class="animate-text">农业助手</h2>
+              <p class="animate-text">
+                无花果别名奶浆果，是一种很好的保健果品。
+              </p>
+              <div class="dots"><span></span> <span></span> <span></span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="h1">热门视频</h1>
+      <div class="TextList">
+        <a name="TextList">
+          <ul class="TextListUl">
+            <li>
+              <div class="TextBlock">
+                <a href="./Pages/PopularVideo1.html">
+                  <img src="./Img/PopularVideo_img_1.png" alt="" />
+                  <span>视频| 小小无花果，圆了致富梦！</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="TextBlock">
+                <a href="./Pages/PopularVideo2.html"
+                  ><img src="./Img/PopularVideo_img_2.png" alt="" />
+                  <span>视频｜小小无花果 敲开致富门</span></a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="TextBlock">
+                <a href="#"
+                  ><img
+                    src="./Img/PopularVideo_img_3.jpg"
+                    alt=""
+                    style="position: relative; left: 6%"
+                  />
+                  <span style="position: relative; left: 115px"
+                    >来不及擦嘴了，无花果这样吃简直逆天！</span
+                  ></a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="TextBlock">
+                <a href="#"
+                  ><img
+                    src="./Img/PopularVideo_img_4.jpg"
+                    alt=""
+                    style="position: relative; left: 9%"
+                  />
+                  <span style="position: relative; left: 115px"
+                    >盛夏的果实，无花果！</span
+                  ></a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="TextBlock">
+                <a href="#"
+                  ><img src="./Img/PopularVideo_img_5.jpg" alt="" />
+                  <span>听说无花果白色的液体很有用！ </span></a
+                >
+              </div>
+            </li>
+          </ul>
+          <div class="showmore">
+            <span><a href="#TextList">显示全部内容</a></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <div class="NAV">
+          <li>
+            <i class="fas"><a href="./index.html">首页</a></i>
+          </li>
+          <li>
+            <i class="fas"><a href="./Pages/TabList.html">无花果</a></i>
+            <ul class="TwiceNav">
+              <li><a href="./Pages/TabList.html">无花果干</a></li>
+              <li><a href="./Pages/TabList.html">生鲜无花果</a></li>
+              <li><a href="./Pages/AboutUs.html">关于我们</a></li>
+            </ul>
+          </li>
+          <li>
+            <i class="fas"><a href="./Pages/GiveMessage.html">给我们留言</a></i>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <script src="./Js/index.js"></script>
+    <script>
+      $(function () {
+        let $show = $(".TextListUl li:gt( 2 )"); //获取索引大于2的列表内容（除了最后一个）
+        $show.hide(); //隐藏上面选取的元素
+        let btn = $(".showmore span > a"); //获取按钮
+        console.log($show, btn);
+        btn.click(function () {
+          // 给按钮添加点击事件
+          if ($show.is(":visible")) {
+            // 如果元素显示，则进行以下操作
+            $show.hide();
+            $(".showmore span a").text("显示全部内容");
+            $(".TextListUl li div").removeClass("select");
+          } else {
+            // 如果元素隐藏，则进行以下操作
+            $show.show();
+            $(".showmore span a").text("收起");
+            $(".TextListUl li div").filter(":TextList('2')").addClass("select");
+          }
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
